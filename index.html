@@ -4,6 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-database.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyBBih7CX0eolJ-2vkjIb5kGcc4rfiUT2y4",
+            authDomain: "quiz-app-aqib.firebaseapp.com",
+            databaseURL: "https://quiz-app-aqib.firebaseio.com",
+            projectId: "quiz-app-aqib",
+            storageBucket: "quiz-app-aqib.appspot.com",
+            messagingSenderId: "453919531855",
+            appId: "1:453919531855:web:88baca8223bbfa558c5b3a",
+            measurementId: "G-X6RBJRHX83"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+    </script>
     <title>Quiz App</title>
 </head>
 <body>
@@ -11,6 +30,13 @@
 <div id="head">
     <h1><u>Welcome! To Quiz App</u></h1>
 </div>  
+    <br>
+    <div id="name">
+        <input type="text" id="names" placeholder="Enter your name:">
+        <button onclick="input()">Add Name</button>
+        
+
+    </div>
 <br>  
 <div>
 <fieldset>
