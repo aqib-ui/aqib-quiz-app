@@ -76,8 +76,34 @@ document.write("your total score is "+ sc +"<br>"+"<br>" +"<br>"  +"And Your Per
 
 
 
+    // firebase.database().ref('todo').on('child_added',function(datas){
+    
+    
+    //     document.write(datas.val().value+" your total score is "+ sc +"<br>"+"<br>" +"<br>"  +"And Your Percentage is "+ per+"%"+"<br>"+"<br>"+"<br>"+"Back! To The Quiz Please Refresh The Page...")
+    //     })
 
 
 
 
+
+}
+
+
+function input(){
+    var foo=document.getElementById("names")
+    var data = firebase.database().ref('todo')
+    var key = data.push().key;
+
+
+    var todos={
+        value: foo.value,
+        key: key
+    }
+    data.child(key).set(todos)
+
+       
+    
+    foo.value=""
+
+   
 }
